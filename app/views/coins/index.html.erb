@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/stylesheet/index.css">
+
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Moedas</h1>
+
+  <div id="coins">
+    <% @coins.each do |coin| %>
+      <%= render coin %>
+      <p>
+        <%= link_to "Essa moeda", coin %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "Nova moeda", new_coin_path %>
+</head>
+</html>
+
